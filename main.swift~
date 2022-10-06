@@ -1,0 +1,40 @@
+
+
+// ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+let unsortedIntegers = [5, 1, 4, 2, 8]
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+// ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧
+
+
+// Add your code below:
+var unsortedArray = unsortedIntegers
+
+func swap(array: inout [Int], firstIndex: Int, secondIndex: Int) {
+    let swaps = array[firstIndex]
+    array[firstIndex] = array[secondIndex]
+    array[secondIndex] = swaps
+}
+
+func selectionSort(array: inout [Int]) {
+    var swapCount = 0
+    var totalCount = 0
+    
+    for i in 0..<array.count {
+        print("Pass: \(i), Swaps: \(swapCount)/\(totalCount), Array: \(array)")
+        var min = i
+        swapCount = 0
+        for x in i + 1..<array.count {
+            if array[x] < array[min] {
+                min = x
+                
+            }
+        }
+        
+        swap(array: &array, firstIndex: i, secondIndex: min)
+        swapCount += 1
+        totalCount += 1
+    }
+}
+
+selectionSort(array: &unsortedArray)
