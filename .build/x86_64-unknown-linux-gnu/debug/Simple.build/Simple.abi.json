@@ -36,6 +36,38 @@
     },
     {
       "kind": "Function",
+      "name": "lowercase",
+      "printedName": "lowercase(array:)",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Void",
+          "printedName": "()"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Array",
+          "printedName": "[Swift.String]",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "paramValueOwnership": "InOut",
+          "usr": "s:Sa"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:6Simple9lowercase5arrayySaySSGz_tF",
+      "mangledName": "$s6Simple9lowercase5arrayySaySSGz_tF",
+      "moduleName": "Simple",
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Function",
       "name": "swap",
       "printedName": "swap(array:firstIndex:secondIndex:)",
       "children": [

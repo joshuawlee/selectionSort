@@ -4,6 +4,11 @@ while let line = readLine() {
     unsortedArray.append(line)
 }
 
+func lowercase(array: inout [String]) {
+    for i in 0..<array.count {
+        array[i] = array[i].lowercased()
+    }
+}
 func swap(array: inout [String], firstIndex: Int, secondIndex: Int) {
     let swaps = array[firstIndex]
     array[firstIndex] = array[secondIndex]
@@ -11,7 +16,7 @@ func swap(array: inout [String], firstIndex: Int, secondIndex: Int) {
 }
 
 func selectionSort(array: inout [String]) {
-    
+    lowercase(array: &array)
     for i in 0..<array.count {
         var min = i
         for x in i + 1..<array.count {
